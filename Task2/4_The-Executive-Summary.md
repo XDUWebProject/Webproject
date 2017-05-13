@@ -12,7 +12,7 @@
 
 ###### 注册和登陆界面
 
-![注册和登陆界面](https://github.com/rioyoung3/Webproject/blob/master/Register.png)
+![注册和登陆界面](https://github.com/XDUWebProject/Webproject/blob/master/Register.png)
 
 ###### 登陆后进入的主界面
-![登陆后进入的主界面](https://github.com/rioyoung3/Webproject/blob/master/main.png)
+![登陆后进入的主界面](https://github.com/XDUWebProject/Webproject/blob/master/main.png)
