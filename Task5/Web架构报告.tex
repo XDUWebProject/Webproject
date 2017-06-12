@@ -1,0 +1,74 @@
+\documentclass[]{article}
+\usepackage[noindent,UTF8]{ctex}
+
+%opening
+\title{Task5-Web应用架构报告}
+\author{杨瑞，李静旭，耿豪}
+
+\begin{document}
+
+\maketitle
+
+\section{概述}
+我们采用的是We架构中的层次结构，将应用根据逻辑划分成不同的部分，然后单独考虑并单独编码实现，每一部分实现不同的功能，并可能分布在不同的主机，不同的操作系统上，通常以层（ layer）来描述划分的领域。如图 \ref{fig:graph1} 所示
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=3in,height=3in]{layer.png}
+	\caption{Web应用的三层架构}
+	\label{fig:graph1}
+\end{figure}
+
+\section{展示层}
+展示层就是用户和系统交互的层面，所以在我们的这个系统中，展示层所展现的就是为用户提供注册和登陆界面。如果用户用户还没有账号，那就先注册再登录；如果有账号则直接登陆。
+
+\subsection{注册登陆界面}
+注册界面如图 \ref{fig:graph2} 所示
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=3in,height=3in]{signup.png}
+	\caption{注册界面}
+	\label{fig:graph2}
+\end{figure}
+
+登陆界面如图 \ref{fig:graph3} 所示
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=3in,height=3in]{login.png}
+	\caption{登陆界面}
+	\label{fig:graph3}
+\end{figure}
+
+
+\section{业务逻辑层}
+我们这个系统业务逻辑层很简单，就是登陆进去之后写微博内容，然后将其内容保存，另外其他用户包括自己也可以点赞。如图 \ref{fig:graph4} 所示
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=3in,height=3in]{content.png}
+	\caption{内容页面}
+	\label{fig:graph4}
+\end{figure}
+
+不过上面这个界面和功能实在是太low了，所以目前打算在该页面中嵌入富文本编辑器，这样发送内容的时候就不仅仅发文字了，还可以修该文字的大小和颜色，还可以发表情，图片，代码等丰富的功能。如图 \ref{fig:graph5} 所示是百度开发的UEeditor测试示例。
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=3in,height=3in]{UEeditor.png}
+	\caption{UEedito预览}
+	\label{fig:graph5}
+\end{figure}
+
+
+\section{数据层}
+我们使用了MySQL数据库来保存数据，总共创建了四张表，其中四张表结构如图\ref{fig:graph6}所示。
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=3in,height=3in]{database.png}
+	\caption{表结构}
+	\label{fig:graph6}
+\end{figure}
+
+\end{document}
